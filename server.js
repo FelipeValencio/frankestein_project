@@ -1,6 +1,6 @@
 const http = require('http');
 
-const hostname = '127.0.0.1';
+// const hostname = process.env.YOUR_HOST || '0.0.0.0'
 const port = process.env.PORT || 80
 
 const server = http.createServer((req, res) => {
@@ -9,6 +9,6 @@ const server = http.createServer((req, res) => {
   res.end('Hello World');
 });
 
-server.listen(port, hostname, () => {
+server.listen(port, () => {
   console.log(`Server running at http://${hostname}:${port}/`);
 });
