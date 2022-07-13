@@ -1,7 +1,10 @@
+const express = require('express')
+const helmet = require("helmet");
 var cowsay = require("cowsay");
 
-const express = require('express')
 const app = express()
+app.disable('x-powered-by');
+app.use(helmet());
 
 const port = process.env.PORT || 8080
 
